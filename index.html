@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Frostline Rules</title>
+
+<style>
+
+body{
+    margin:0;
+    font-family:Arial, sans-serif;
+    background:linear-gradient(#0f2027,#203a43,#2c5364);
+    color:white;
+    text-align:center;
+    overflow-x:hidden;
+}
+
+/* Logo */
+
+.logo{
+    font-size:40px;
+    font-weight:bold;
+    padding:30px;
+    animation: glow 2s infinite alternate;
+}
+
+@keyframes glow{
+    from{ text-shadow:0 0 10px #00eaff;}
+    to{ text-shadow:0 0 25px #8be9ff;}
+}
+
+/* Discord button */
+
+.discord-btn{
+    display:inline-block;
+    margin:20px;
+    padding:15px 30px;
+    background:#5865F2;
+    color:white;
+    font-size:18px;
+    border-radius:10px;
+    text-decoration:none;
+    transition:0.3s;
+}
+
+.discord-btn:hover{
+    transform:scale(1.1);
+}
+
+/* Rules */
+
+.container{
+    width:90%;
+    max-width:800px;
+    margin:auto;
+}
+
+.rule{
+    background:rgba(255,255,255,0.08);
+    padding:15px;
+    margin:10px 0;
+    border-radius:10px;
+    backdrop-filter:blur(5px);
+}
+
+/* Snow */
+
+.snowflake{
+    position:fixed;
+    top:-10px;
+    color:white;
+    font-size:1em;
+    animation: fall linear infinite;
+}
+
+@keyframes fall{
+    to{
+        transform:translateY(110vh);
+    }
+}
+
+footer{
+    margin-top:40px;
+    padding:20px;
+    background:#111;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="logo">❄ Frostline ❄</div>
+
+<a class="discord-btn" href="https://discord.gg/zc299nWsnw" target="_blank">
+Join Frostline Discord
+</a>
+
+<div class="container">
+
+<h2>📜 Server Rules</h2>
+
+<div class="rule">1. Respect all members and staff at all times.</div>
+<div class="rule">2. No bullying, harassment, or toxic behavior.</div>
+<div class="rule">3. No hate speech or discrimination allowed.</div>
+<div class="rule">4. Do not spam messages, emojis, or commands.</div>
+<div class="rule">5. Keep conversations appropriate and friendly.</div>
+<div class="rule">6. No NSFW or inappropriate content.</div>
+<div class="rule">7. Follow Discord Terms of Service always.</div>
+<div class="rule">8. Listen to moderators and staff instructions.</div>
+<div class="rule">9. No advertising without staff permission.</div>
+<div class="rule">10. Use the correct channels for topics.</div>
+<div class="rule">11. No impersonating other users or staff.</div>
+<div class="rule">12. Do not share personal information.</div>
+<div class="rule">13. No excessive caps or message flooding.</div>
+<div class="rule">14. No trolling or intentionally annoying members.</div>
+<div class="rule">15. Respect everyone's opinions and differences.</div>
+<div class="rule">16. No malicious links or harmful files.</div>
+<div class="rule">17. Keep usernames and nicknames appropriate.</div>
+<div class="rule">18. No exploiting bugs or loopholes.</div>
+<div class="rule">19. Use bots responsibly and do not abuse them.</div>
+<div class="rule">20. No disruptive or loud soundboard spam.</div>
+<div class="rule">21. English only unless channel says otherwise.</div>
+<div class="rule">22. Do not beg for roles or permissions.</div>
+<div class="rule">23. Staff choices are final.</div>
+<div class="rule">24. Any hate speech or slurs will result in an immediate ban.</div>
+<div class="rule">25. No backseat moderating or mini-modding.</div>
+<div class="rule">26. Keep profile pictures appropriate and safe.</div>
+<div class="rule">27. Do not bypass filters or punishments.</div>
+<div class="rule">28. Report problems to staff instead of arguing.</div>
+<div class="rule">29. Have fun and keep the server welcoming.</div>
+<div class="rule">30. Breaking rules may result in mute, kick, or ban.</div>
+
+</div>
+
+<footer>
+Frostline Bot ❄️ • Failure to follow rules may result in mute, kick, or ban.
+</footer>
+
+<script>
+
+/* Generate snow */
+
+function createSnow(){
+    const snow=document.createElement("div")
+    snow.classList.add("snowflake")
+    snow.innerHTML="❄"
+
+    snow.style.left=Math.random()*100+"vw"
+    snow.style.animationDuration=(Math.random()*3+2)+"s"
+    snow.style.opacity=Math.random()
+
+    document.body.appendChild(snow)
+
+    setTimeout(()=>{snow.remove()},5000)
+}
+
+setInterval(createSnow,120)
+
+</script>
+
+</body>
+</html>
